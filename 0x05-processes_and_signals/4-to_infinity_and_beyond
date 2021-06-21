@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# print Loop and kill ^c
+
+while true;
+do
+	echo To infinity and beyond
+    sleep 2
+done
