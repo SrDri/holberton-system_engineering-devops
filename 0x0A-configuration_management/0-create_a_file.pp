@@ -1,4 +1,4 @@
-# Task 1
+# Task 0 - Using Puppet, create a file in /tmp.
 file { '/tmp/holberton':
   path    => '/tmp/holberton',
   mode    => '0744',
