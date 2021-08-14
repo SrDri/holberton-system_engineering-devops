@@ -1,6 +1,6 @@
 # Task 2 - create a manifest that kills a process named killmenow
 
-exec {'killmenow':
-	command  => 'pkill killmenow',
-	path => '/usr/bin'
+exec { 'killmenow':
+command  => 'pkill killmenow',
+provider => shell,
 }
