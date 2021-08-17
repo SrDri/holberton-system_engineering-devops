@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Install nginx & output 'Holberton School' by default
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo chmod 777 /var/www/html/index.nginx-debian.html
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+
+line="location /redirect_me {rewrite ^/redirect_me(.*)$ https://juancarabalidev.com permanent;\n}"
+sudo sed -i "49i $line" /etc/nginx/sites-available/default
+
+sudo service nginx restart
