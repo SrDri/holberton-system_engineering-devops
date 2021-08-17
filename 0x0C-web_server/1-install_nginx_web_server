@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Install nginx & output 'Holberton School' by default
-
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo 'Holberton School' > /usr/share/nginx/html/index.html
