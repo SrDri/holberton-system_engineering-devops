@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# listen port 80 short
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo pkill -HUP nginx
