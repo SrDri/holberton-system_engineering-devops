@@ -39,12 +39,15 @@ defaults
 backend letsencrypt-backend
         server letsencrypt 127.0.0.1:8888
 
-frontend http_front
-        bind *:80
+frontend www-https
         bind *:443 ssl crt /etc/ssl/juancarabali.tech/juancarabali.tech.pem
         reqadd X-Forwarded-Proto:\ https
         acl letsencrypt-acl path_beg /.well-known/acme-challenge/
         use_backend letsencrypt-backend if letsencrypt-acl
+        default_backend http_back
+
+frontend http_front
+        bind *:80
         mode http
         default_backend http_back
 
