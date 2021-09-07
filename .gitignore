@@ -2,3 +2,8 @@
 0x0C-web_server/default
 0x0F-load_balancer/0-transfer_file
 0x13-firewall/0-transfer_file
+0x14-mysql/install-mysql
+0x14-mysql/setup_database
+0x14-mysql/task3
+0x14-mysql/create_user2
+0x14-mysql/create_user
