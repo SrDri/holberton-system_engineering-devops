@@ -40,7 +40,6 @@ skip-external-locking
 #
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
-# * Paso 1 - proyecto: Comentar linea de abajo
 # bind-address          = 127.0.0.1
 #
 # * Fine Tuning
@@ -81,7 +80,6 @@ log_error = /var/log/mysql/error.log
 # The following can be used as easy to replay backup logs or for replication.
 # note: if you are setting up a replication slave, see README.Debian about
 #       other settings you may need to change.
-# * Paso 2 - proyecto: Descomentar linea de server-id y log_bin y binlog_do_db: Descomentada y nombre de la base de datos
 server-id               = 1
 log_bin                 = /var/log/mysql/mysql-bin.log
 expire_logs_days        = 10
