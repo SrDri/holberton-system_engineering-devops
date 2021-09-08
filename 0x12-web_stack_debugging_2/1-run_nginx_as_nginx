@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# script configure nginx run as ngnix user
+chmod 755 /etc/nginx/nginx.conf
+sed -i '1 i user nginx;' /etc/nginx/nginx.conf
+sed -i 's/80 default/8080 default/' /etc/nginx/sites-available/default
+sudo -u nginx service nginx start
