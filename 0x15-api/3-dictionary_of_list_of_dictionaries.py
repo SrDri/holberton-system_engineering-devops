@@ -17,11 +17,12 @@ def all_tasks():
     struct = {}
     for employe in employees:
         one_id = employe.get("id")
+        one_username = employe.get("username")
         struct[one_id] = []
         for one in todos:
-            one_username = one.get("username")
             one_task_status = one.get("completed")
             one_task_title = one.get("title")
+
             struct[one_id].append({"username": one_username,
                                    "task": one_task_title,
                                    "completed": one_task_status})
