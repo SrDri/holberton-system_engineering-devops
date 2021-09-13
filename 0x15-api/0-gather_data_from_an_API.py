@@ -30,8 +30,9 @@ def tasks_list(employee_id=None):
 
     del todos, employee
 
-    print("Employee {}".format(name), end=" ")
-    print("is done with tasks({}/{})".format(name, tasks_done, tasks_total))
+    print("Employee {:s} is done with tasks({:d}/{:d}):".
+          format(name, tasks_done, tasks_total))
+
     for task in titles_tasks:
         print('\t', task)
 
