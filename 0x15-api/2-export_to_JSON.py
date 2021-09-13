@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Export CSV API """
+""" Export JSON API """
 import json
 from requests import get
 from sys import argv
