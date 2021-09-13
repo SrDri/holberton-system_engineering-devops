@@ -17,14 +17,15 @@ def all_tasks():
     for employe in employees:
         one_id = employe.get("id")
         struct[one_id] = []
-    for one in todos:
-        one_username = employe.get("username")
-        one_task_status = one.get("completed")
-        one_task_title = one.get("title")
+        for one in todos:
+            if one.get("userId") == one_id:
+                one_username = employe.get("username")
+                one_task_status = one.get("completed")
+                one_task_title = one.get("title")
 
-        struct[one_id].append({"username": one_username,
-                               "task": one_task_title,
-                               "completed": one_task_status})
+                struct[one_id].append({"username": one_username,
+                                       "task": one_task_title,
+                                       "completed": one_task_status})
 
     with open(filename, "w") as f:
         json.dump(struct, f)
