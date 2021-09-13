@@ -24,15 +24,16 @@ def tasks_list(employee_id=None):
     titles_tasks = []
 
     for task in todos:
-        if task.get("completed") == True:
+        if task.get("completed") is True:
             titles_tasks.append(task.get("title"))
             tasks_done = tasks_done + 1
 
     del todos, employee
 
-    print("Employee {} is done with tasks({}/{})".format(name, tasks_done, tasks_total))
+    print("Employee {}".format(name), end=" ")
+    print("is done with tasks({}/{})".format(name, tasks_done, tasks_total))
     for task in titles_tasks:
-        print('\t' + task)
+        print('\t', task)
 
 
 if __name__ == "__main__":
