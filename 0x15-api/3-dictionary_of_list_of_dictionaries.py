@@ -2,7 +2,6 @@
 """ Export JSON ALL API """
 import json
 from requests import get
-from sys import argv
 
 
 def all_tasks():
@@ -17,15 +16,15 @@ def all_tasks():
     struct = {}
     for employe in employees:
         one_id = employe.get("id")
-        one_username = employe.get("username")
         struct[one_id] = []
-        for one in todos:
-            one_task_status = one.get("completed")
-            one_task_title = one.get("title")
+    for one in todos:
+        one_username = employe.get("username")
+        one_task_status = one.get("completed")
+        one_task_title = one.get("title")
 
-            struct[one_id].append({"username": one_username,
-                                   "task": one_task_title,
-                                   "completed": one_task_status})
+        struct[one_id].append({"username": one_username,
+                               "task": one_task_title,
+                               "completed": one_task_status})
 
     with open(filename, "w") as f:
         json.dump(struct, f)
